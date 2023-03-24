@@ -2,12 +2,15 @@
   "name": "ts-starter",
   "version": "0.0.1",
   "scripts": {
-    "start": "tsx index.ts",
+    "start": "tsx src/index.ts",
+    "start:dev": "op run --env-file='.env' -- npm start",
     "format": "prettier --write .",
+    "watch:type-check": "npx tsc --noEmit --watch",
     "test": "run-p test:*",
     "test:unit": "vitest",
     "test:lint": "eslint .",
-    "test:format": "prettier --check ."
+    "test:format": "prettier --check .",
+    "test:type-check": "tsc --noEmit"
   },
   "author": "mpppk",
   "license": "ISC",
