@@ -1,5 +1,8 @@
+import { loadEnv } from "./env";
+
 const main = async () => {
-  console.log("Hello World", process.env["ENV_KEY"]);
+  const env = loadEnv();
+  console.log(`${env.NODE_ENV}: Hello World`);
 };
 
 main();

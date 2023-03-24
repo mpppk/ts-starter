@@ -2,8 +2,8 @@
   "name": "ts-starter",
   "version": "0.0.1",
   "scripts": {
-    "start": "tsx src/index.ts",
-    "start:dev": "op run --env-file='.env' -- npm start",
+    "start": "NODE_ENV=production tsx src/index.ts",
+    "start:dev": "op run --env-file='.env' -- tsx src/index.ts",
     "format": "prettier --write .",
     "watch:type-check": "npx tsc --noEmit --watch",
     "test": "run-p test:*",
@@ -23,6 +23,7 @@
     "prettier": "^2.8.7",
     "tsx": "^3.12.6",
     "typescript": "^5.0.2",
-    "vitest": "^0.29.7"
+    "vitest": "^0.29.7",
+    "zod": "^3.21.4"
   }
 }
